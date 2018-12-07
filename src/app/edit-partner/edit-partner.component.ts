@@ -3,6 +3,7 @@ import { feildList } from './feildList'
 import { FormControl } from '@angular/forms';
 //import { } from 'googlemaps';
 import { MapsAPILoader } from '@agm/core';
+//import { } from 'googlemaps';
 
 @Component({
   selector: 'app-edit-partner',
