@@ -1,0 +1,30 @@
+<div class="scroll-y h-100">
+	<br>
+<div class="map-form" >
+  <div class="map-input-con" >
+<input class="w-100" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+  </div>
+  <div class="map-form">
+  <agm-map class="map-time h-100" [latitude]="latitude" [longitude]="longitude"></agm-map>
+  </div>
+</div>
+	<br>
+<br>
+
+<div *ngFor="let feild of feildList" >
+<p>
+  {{feild.label}} : 
+</p>
+<input [(ngModel)]="feild.value" *ngIf="!feild.type" placeholder="{{feild.label}}" class="w-100 form-control" />
+
+<textarea [(ngModel)]="feild.value" *ngIf="feild.type == 'textArea'" placeholder="{{feild.label}}" class="w-100 form-control"></textarea>
+
+<br>
+</div>
+<br>
+
+<div>
+  <button (click)="save()" class="btn btn-primary m-3">Save</button>
+</div>
+
+</div>

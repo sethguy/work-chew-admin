@@ -1,0 +1,24 @@
+<div class="h-100 w-100 partner-list-container scroll-y">
+	<div class="partner-box" *ngFor='let partner of partners'>
+		<div class="row no-gutter">
+			<div style="height:300px;background-color:black" class="d-none d-md-block col-md-6">
+        <img class="h-100 w-100" src="{{partner.photoUrl}}" alt="">
+			</div>
+			<div class="col-md-6 col-sm-12 col-12 d-flex flex-column align-items-center">
+				<br/>
+					<h1 class="Brandon_bld">{{partner.name}} </h1>
+        <br/>
+			    <span class="brandong text-center">	{{partner.address}} </span>
+        <br/>
+        <span class="brandong text-center">	{{partner.website}} </span>
+        <br/>
+           <span class="brandong text-center">	WorkChew Hours:</span>
+           <span class="brandong text-center">	{{partner.workChewHours|| partner.hours}} </span>
+        <br/>
+    </div>
+    <div style="height:300px;background-color:black" class="col-sm-12 col-12 d-md-none">
+              <img class="h-100 w-100" src="{{partner.photoUrl}}" alt="">
+    </div>
+  </div>
+</div>
+</div>
