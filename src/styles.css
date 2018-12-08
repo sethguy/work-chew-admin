@@ -1,25 +1,11 @@
 /* Add application styles & imports to this file! */
 
-  @import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+.Brandon_bld {
+    font-family: 'Lato';
+    font-weight: bold;
+}
 
-	@font-face {
-		font-family: Brandon_bld;
-		src: url(/assets/fonts/brandonG/Brandon_bldd.otf) format("opentype");
-		font-weight: 'bold';
-	}
-
-	@font-face {
-		font-family: BrandonG;
-		src: url(/assets/fonts/brandonG/Brandon_regd.otf) format("opentype");
-	}
-
-	.Brandon_bld {
-		font-family: 'Brandon_bld';
-		font-weight: bold;
-	}
-
-	.brandong {
-		font-family: 'BrandonG';
-	}
-
-
+.brandong {
+    font-family: 'Lato';
+}
