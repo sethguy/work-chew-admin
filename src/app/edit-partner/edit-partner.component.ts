@@ -16,7 +16,7 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
   public zoom: number;
   business: any = {};
 
-  @ViewChild("search");
+  @ViewChild("search")
   public searchElementRef: ElementRef;
 
   constructor(
@@ -44,6 +44,12 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
 
     console.log('saved', this.business);
   }
+
+  selectImg = () => {
+
+
+  }
+
   handleAddressChange = (place) => {
 
     console.log('handleAddressChange', place);
