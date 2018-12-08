@@ -3,7 +3,7 @@
     <br>
     <div class="map-form">
       <div class="map-input-con">
-        <input class="w-100" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places"
+        <input #search class="w-100" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places"
           (onAddressChange)="handleAddressChange($event)" />
       </div>
       <div class="map-form">

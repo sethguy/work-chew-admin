@@ -50,6 +50,7 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
     if(event.target.files){
 
       const [file] = event.target.files;
+      console.log('file',file)
 
     }
 
