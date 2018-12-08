@@ -147,6 +147,7 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
       });
     }
   }
+  
   ngAfterViewInit() {
     setTimeout(() => {
 
@@ -175,7 +176,6 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
       });
 
     }, 5000)
-
   }
 
 }
