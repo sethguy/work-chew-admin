@@ -2,7 +2,6 @@ import { Component, OnInit, ElementRef, NgZone, ViewChild, AfterViewInit } from 
 import { feildList } from './feildList'
 import { FormControl } from '@angular/forms';
 import { MapsAPILoader } from '@agm/core';
-
 @Component({
   selector: 'app-edit-partner',
   templateUrl: './edit-partner.component.html',
@@ -140,12 +139,14 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
 
       this.searchControl = new FormControl();
       this.mapsAPILoader.load().then(() => {
+
         let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
           types: ["address"]
         });
         autocomplete.addListener("place_changed", () => {
           this.ngZone.run(() => {
             //get the place result
+
             let place: google.maps.places.PlaceResult = autocomplete.getPlace();
 
             //verify result
