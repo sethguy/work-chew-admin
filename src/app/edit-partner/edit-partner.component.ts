@@ -1,9 +1,7 @@
 import { Component, OnInit, ElementRef, NgZone, ViewChild, AfterViewInit } from '@angular/core';
 import { feildList } from './feildList'
 import { FormControl } from '@angular/forms';
-//import { } from 'googlemaps';
 import { MapsAPILoader } from '@agm/core';
-//import { } from 'googlemaps';
 
 @Component({
   selector: 'app-edit-partner',
@@ -18,7 +16,7 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
   public zoom: number;
   business: any = {};
 
-  @ViewChild("search")
+  @ViewChild("search");
   public searchElementRef: ElementRef;
 
   constructor(
@@ -28,7 +26,7 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     // this.getPlaceAutocomplete();
-    //this.setCurrentPosition()
+    //this.setCurrentPosition();
   }
 
   save() {
