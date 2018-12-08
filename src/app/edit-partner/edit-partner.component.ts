@@ -45,6 +45,16 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
     console.log('saved', this.business);
   }
 
+  onPhotoSelect = (event) => {
+
+    if(event.target.files){
+
+      const [file] = event.target.files;
+
+    }
+
+  }
+
   selectImg = () => {
 
 
@@ -118,7 +128,7 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
   }
 
   setFeildsFromBusiness = (business) => {
- this.feildList=   this.feildList.map(feild => {
+    this.feildList = this.feildList.map(feild => {
       return {
         ...feild,
         value: business[feild.feildKey],
