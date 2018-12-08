@@ -27,7 +27,7 @@ export class EditPartnerComponent implements OnInit {
   imgUrl : any;
 
 
-  constructor(private mapsAPILoader : MapsAPILoader, private ngZone : NgZone,) {}
+  constructor(private mapsAPILoader : MapsAPILoader, private ngZone : NgZone) {}
 
   ngOnInit() {
     // this.getPlaceAutocomplete(); this.setCurrentPosition();
