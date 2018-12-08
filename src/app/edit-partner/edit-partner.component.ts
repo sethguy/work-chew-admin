@@ -33,9 +33,9 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
     const dataFromFeilds = this.feildList.reduce((data, feild) => {
       return {
         ...data,
-        [feild.feildKey]: feild.value
+        [feild.feildKey]: feild.value,
       }
-    }, {})
+    }, {});
 
     this.business = {
       ...this.business,
@@ -46,25 +46,17 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
   }
 
   onPhotoSelect = (event) => {
-
     if(event.target.files){
-
       const [file] = event.target.files;
-      console.log('file',file)
-
+      console.log('file',file);
     }
-
   }
 
   selectImg = () => {
 
-
   }
 
   handleAddressChange = (place) => {
-
-    console.log('handleAddressChange', place);
-
     var { types, opening_hours, geometry, address_components, website } = place
 
     var state = address_components
@@ -73,17 +65,12 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
         var { types } = component;
 
         if (types.includes('administrative_area_level_1')) {
-
           state = component.short_name
-          console.log('found state')
-
         }
-
         return state;
-
       }, {})
 
-    var business = {
+    let business:any = {
 
       name: place.name,
       address: place.formatted_address,
@@ -147,7 +134,7 @@ export class EditPartnerComponent implements OnInit, AfterViewInit {
       });
     }
   }
-  
+
   ngAfterViewInit() {
     setTimeout(() => {
 
